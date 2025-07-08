@@ -1,7 +1,9 @@
+import Releases from "@/components/Releases";
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <Releases />
     </main>
   );
 }
