@@ -53,7 +53,7 @@ export default function Home() {
   }, [releases, playing]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 lg:p-24">
       <h1 className="text-2xl font-bold mb-4">Releases</h1>
       <div className="grid gap-[10px] landscape:grid-flow-col place-content-center h-full">
         {releases?.map((release, index) => (
