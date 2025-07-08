@@ -11,7 +11,6 @@ export function PlayPauseButton({
   onClick,
   isPlaying,
   className,
-  ...props
 }: PlayPauseButtonProps) {
   const Icon = isPlaying ? PauseIcon : PlayIcon;
   return (
