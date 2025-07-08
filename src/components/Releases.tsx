@@ -53,13 +53,12 @@ export default function Home() {
   }, [releases, playing]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4 lg:p-24">
-      <h1 className="text-2xl font-bold mb-4">Releases</h1>
-      <div className="grid gap-[10px] landscape:grid-flow-col place-content-center h-full">
+    <>
+      <div className="grid gap-[10px] landscape:grid-flow-col place-content-center h-full min-h-screen">
         {releases?.map((release, index) => (
           <P9Frame
             key={release._id}
-            className="z-10 p-[10px] aspect-square h-full min-h-0 max-h-full w-full max-w-[320px] sm:max-w-[500px]"
+            className="z-10 p-[10px] aspect-square h-auto w-full max-w-[320px] sm:max-w-[500px]"
           >
             <div className="relative w-fit group">
               {release.preview?.image && (
@@ -100,10 +99,10 @@ export default function Home() {
         onPause={() => setPlaying(null)}
         style={{ display: "none" }}
       />
-      <pre className="text-xs overflow-auto p-4 bg-gray-100 w-full whitespace-pre-wrap max-w-4xl mt-8">
+      <pre className="text-xs overflow-auto p-4 bg-gray-100 w-full whitespace-pre-wrap max-w-4xl mt-8 mx-auto">
         {JSON.stringify(releases, null, 2)}
       </pre>
-    </main>
+    </>
   );
 }
 
